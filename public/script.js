@@ -11,5 +11,10 @@ myApp.config(function($routeProvider){
     .when('/log', {
       templateUrl: '/pages/workoutlogger.html',
       controller : 'AppCtrl'
+    })
+
+    .when('/testimonial', {
+      templateUrl: '/pages/testimonial.html',
+      controller: ''
     });
 });
