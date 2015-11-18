@@ -1,0 +1,25 @@
+<h1>Workout Tracker App</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Workout</th>
+            <th>Sets</th>
+            <th>Reps</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input class="from-control" ng-model="workout.workout"></td>
+            <td><input class="from-control" ng-model="workout.sets"></td>
+            <td><input class="from-control" ng-model="workout.reps"></td>
+            <td><button class="btn btn-primary" ng-click="addWorkout()">Add Workout</button><button class="btn btn-info" ng-click="updateWorkout()">Update</button></td>
+          </tr>
+          <tr ng-repeat="workout in workoutlist">
+            <td>{{workout.workout}}</td>
+            <td>{{workout.sets}}</td>
+            <td>{{workout.reps}}</td>
+            <td><button class="btn btn-warning" ng-click="editWorkout(workout._id)">Edit</button><button class="btn btn-danger" ng-click="deleteWorkout(workout._id)">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
